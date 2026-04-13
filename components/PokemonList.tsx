@@ -1,5 +1,4 @@
-import { Pokemon } from "@/lib/pokeapi";
-import Image from "next/image";
+import { Pokemon } from "@/types/types";
 import PokemonCard from "./PokemonCard";
 
 export default function PokemonList({
@@ -15,18 +14,10 @@ export default function PokemonList({
     );
   }
   return (
-    <div className="grid grid-cols-1 smL:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
+    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-2">
       {pokemonData.map((item) => (
         <PokemonCard key={item.id} pokemon={item} />
       ))}
     </div>
-    // <div className="flex flex-wrap gap-2">
-    //   {pokemonData.map((item) => (
-    //     <div className="bg-gray-200 rounded-xl" key={item.name}>
-    //       <h1 className="text-black text-center font-semibold">{item.name}</h1>
-    //       <Image src={item.image} alt={item.name} width={150} height={100} />
-    //     </div>
-    //   ))}
-    // </div>
   );
 }

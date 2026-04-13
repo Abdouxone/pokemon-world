@@ -1,22 +1,7 @@
+import { Pokemon, PokemonListResponse, PokemonType } from "@/types/types";
+
 const POKEAPI_BASE = "https://pokeapi.co/api/v2";
 
-export interface Pokemon {
-  id: number;
-  name: string;
-  image?: string;
-  types?: string[];
-  url: string;
-}
-export interface PokemonType {
-  name: string;
-  url: string;
-}
-export interface PokemonListResponse {
-  count: number;
-  next: string | null;
-  previous: string | null;
-  results: Pokemon[];
-}
 //Extract Pokemon id from URL
 function extractPokemonId(url: string): number {
   const parts = url.split("/").filter(Boolean);
