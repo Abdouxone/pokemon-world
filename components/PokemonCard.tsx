@@ -7,8 +7,8 @@ export default function PokemonCard({ pokemon }: { pokemon: Pokemon }) {
   return (
     <div className="glass group relative m-3 p-1 rounded-3xl transition-all duration-500 hover:scale-105 hover:shadow-2xl hover:shadow-blue-500/20 active:scale-95">
       <div className="flex flex-col items-center p-4">
-        <div className="relative w-full aspect-square mb-4 bg-linear-to-br from-white/50 to-white/10 dark:from-white/10 dark:to-white/5 rounded-2xl overflow-hidden flex items-center justify-center p-6">
-          <div className="absolute inset-0 bg-linear-to-tr from-blue-500/5 to-purple-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+        <div className="relative w-full aspect-square mb-4 bg-slate-50 dark:bg-slate-900/50 rounded-2xl overflow-hidden flex items-center justify-center p-6 border border-slate-100 dark:border-slate-800">
+          <div className="absolute inset-0 bg-linear-to-tr from-blue-500/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
           <Image
             src={imageurl || ""}
             alt={pokemon.name}
@@ -26,11 +26,6 @@ export default function PokemonCard({ pokemon }: { pokemon: Pokemon }) {
           <h3 className="text-xl font-bold text-gray-900 dark:text-white capitalize truncate">
             {pokemon.name}
           </h3>
-          <div className="pt-2 flex justify-center gap-2">
-            <div className="h-1.5 w-12 bg-blue-500/20 rounded-full overflow-hidden">
-               <div className="h-full bg-blue-500 w-2/3 group-hover:w-full transition-all duration-700" />
-            </div>
-          </div>
         </div>
       </div>
     </div>

@@ -35,8 +35,7 @@ export default async function Home({ searchParams }: HomeProps) {
   return (
     <div className="min-h-screen py-12 px-4 sm:px-6 lg:px-8">
       <div className="max-w-7xl mx-auto mb-16 relative">
-        <div className="absolute -top-24 -left-20 w-64 h-64 bg-blue-500/10 rounded-full blur-3xl -z-10 animate-pulse" />
-        <div className="absolute -top-24 -right-20 w-64 h-64 bg-yellow-500/10 rounded-full blur-3xl -z-10 animate-pulse delay-700" />
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full max-w-2xl h-64 bg-blue-500/10 rounded-full blur-[120px] -z-10" />
         
         <h1 className="text-5xl md:text-7xl font-extrabold text-center mb-4 tracking-tight">
           <span className="bg-clip-text text-transparent bg-linear-to-r from-blue-600 to-indigo-500 dark:from-blue-400 dark:to-indigo-300">
