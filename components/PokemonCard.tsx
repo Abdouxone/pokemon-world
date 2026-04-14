@@ -18,10 +18,10 @@ export default function PokemonCard({ pokemon }: { pokemon: Pokemon }) {
             fill
           />
         </div>
-        
+
         <div className="w-full text-center space-y-1">
           <span className="text-[10px] uppercase tracking-widest font-bold text-blue-600 dark:text-blue-400 opacity-70">
-            #{String(pokemon.id).padStart(3, '0')}
+            #{String(pokemon.id).padStart(3, "0")}
           </span>
           <h3 className="text-xl font-bold text-gray-900 dark:text-white capitalize truncate">
             {pokemon.name}

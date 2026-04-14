@@ -1,3 +1,4 @@
+import Image from "next/image";
 import PokemonFilters from "@/components/PokemonFilters";
 import PokemonList from "@/components/PokemonList";
 import PokemonPagination from "@/components/PokemonPagination";
@@ -37,11 +38,18 @@ export default async function Home({ searchParams }: HomeProps) {
       <div className="max-w-7xl mx-auto mb-16 relative">
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full max-w-2xl h-64 bg-blue-500/10 rounded-full blur-[120px] -z-10" />
         
-        <h1 className="text-5xl md:text-7xl font-extrabold text-center mb-4 tracking-tight">
-          <span className="bg-clip-text text-transparent bg-linear-to-r from-blue-600 to-indigo-500 dark:from-blue-400 dark:to-indigo-300">
+        <h1 className="text-5xl md:text-7xl font-extrabold text-center mb-6 tracking-tight flex items-center justify-center gap-4 flex-wrap">
+          <Image 
+            src="/favicon.ico" 
+            alt="Pokemon Icon" 
+            width={72} 
+            height={72} 
+            className="w-12 h-12 md:w-16 md:h-16 animate-float"
+            priority
+          />
+          <span className="text-pokemon-yellow drop-shadow-sm">
             Pokémon
           </span>
-          {" "}
           <span className="text-gray-900 dark:text-white">
             World
           </span>
